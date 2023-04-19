@@ -1,3 +1,4 @@
+import platform
 import socket
 import struct
 import cv2  # OpenCV is used only for writing text on image (for testing).
