@@ -2,7 +2,7 @@
 
 Requires the following packages to run:
 
-* pip install pyav
+* pip install av
 * pip install opencv-python
 
 Run the server.py file in one instance of VS Code (or terminal).
