@@ -13,7 +13,13 @@ sock.connect(('127.0.0.1', 8000))
 
 # Set up video capture.
 print("Opening web cam...")
-cap = cv2.VideoCapture(0, cv2.CAP_DSHOW)
+print("Platform:", platform.system())
+if platform.system() == "Windows":
+    print("Using DSHOW.")
+    cap = cv2.VideoCapture(0, cv2.CAP_DSHOW)
+else:
+    cap = cv2.VideoCapture(0)
+    
 cap.set(cv2.CAP_PROP_FRAME_WIDTH, width)
 cap.set(cv2.CAP_PROP_FRAME_HEIGHT, height)
 cap.set(cv2.CAP_PROP_FPS, fps)
